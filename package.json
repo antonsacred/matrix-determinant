@@ -1,11 +1,11 @@
 {
   "name": "matrix-determinant",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Calculate matrix (2D array) determinant",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json",
+    "test": "jest",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" ",
     "lint": "eslint -c .eslintrc.json",
