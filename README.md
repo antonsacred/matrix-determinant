@@ -1,4 +1,5 @@
 # Matrix (2d array) Determinant 
+[![codecov](https://codecov.io/gh/antonsacred/matrix-determinant/branch/master/graph/badge.svg?token=C10CHOFXWE)](https://codecov.io/gh/antonsacred/matrix-determinant)
 
 This package is allowing you to calculate matrix determinant.
 
