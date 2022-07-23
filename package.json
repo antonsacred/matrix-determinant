@@ -9,7 +9,11 @@
     "format": "prettier --write \"src/**/*.ts\" ",
     "lint": "tslint -p tsconfig.json"
   },
-  "keywords": [],
+  "keywords": [
+    "matrix",
+    "2d array",
+    "determinant"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
