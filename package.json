@@ -1,20 +1,26 @@
 {
   "name": "matrix-determinant",
   "version": "1.0.0",
-  "description": "",
+  "description": "Calculate matrix (2D array) determinant",
   "main": "index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" ",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "keywords": [
     "matrix",
     "2d array",
     "determinant"
   ],
-  "author": "",
+  "author": "antonsacred",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^28.1.6",
