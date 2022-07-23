@@ -1,4 +1,7 @@
 export function determinant(m: number[][]): number {
+  if (invalidMatrix(m)) {
+    throw new Error('Invalid Matrix');
+  }
   if (m.length === 1) {
     return determinant1x1(m);
   }
@@ -12,6 +15,15 @@ export function determinant(m: number[][]): number {
     determinantValue += element * determinant(getMatrixWithoutRowCol(m, 0, i));
   }
   return determinantValue;
+}
+
+function invalidMatrix(m: number[][]): boolean {
+  for (const row of m) {
+    if (row.length !== m.length) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function getMatrixWithoutRowCol(m: number[][], excludeRow: number, excludeColumn: number): number[][] {
